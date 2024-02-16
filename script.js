@@ -178,7 +178,7 @@ const getChatResponse = async (incomingChatDiv) => {
     },
     referrerPolicy: "unsafe-url",
     // credentials: "include",
-    mode: 'cors',
+    // mode: 'cors',
     // body: ''
   });
 
