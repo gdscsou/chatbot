@@ -186,6 +186,7 @@ const getChatResponse = async (incomingChatDiv) => {
   if (response.status === 200) {
     // Success!
     const responseJson = await response.json();
+    console.log(responseJson);
     return responseJson;
   } else {
     // Error!
