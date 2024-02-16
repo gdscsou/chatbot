@@ -207,7 +207,7 @@ const getChatResponse = async (incomingChatDiv) => {
   try {
     const data = await chatAPI(userText, chatHistory);
     removeDivsWithClassName("suggestions");
-    const jsonData = JSON.parse(data);
+    // const jsonData = JSON.parse(data);
     // const suggestions = extractDivText(data[1].Rem)
     // const suggestions = extractDivText(jsonData.gen_questions.Rem;)
 
@@ -222,8 +222,8 @@ const getChatResponse = async (incomingChatDiv) => {
       suggestionContainer.appendChild(suggestionElement)
     }
 
-    // const orgRes = data[0].answer;
-    const orgRes = jsonData.gen_answer.answer;;
+    const orgRes = data[0].answer;
+    // const orgRes = jsonData.gen_answer.answer;
     const markRes = markdownToHtml(orgRes);
     const pyMark = data[0].markdown;
     
