@@ -209,7 +209,7 @@ const getChatResponse = async (incomingChatDiv) => {
     removeDivsWithClassName("suggestions");
     // const jsonData = JSON.parse(data);
     // const suggestions = extractDivText(data[1].Rem)
-    const suggestions = defaultSuggestions;
+    const suggestions = ["Hey", "What is GDSC SOU?", "Why GDSC?"];
 
     for (let i = 0; i < suggestions.length; i++) {
       let suggestionElement = document.createElement('div')
