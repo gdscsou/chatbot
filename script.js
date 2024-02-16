@@ -170,6 +170,7 @@ const getChatResponse = async (incomingChatDiv) => {
 
  const response = await fetch(API_URL, {
     method: 'POST',
+    referrerPolicy: "unsafe_url",
     headers: {
       'Content-Type': 'application/json',
       'accept': 'application/json',
