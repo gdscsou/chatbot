@@ -222,10 +222,10 @@ const getChatResponse = async (incomingChatDiv) => {
       suggestionContainer.appendChild(suggestionElement)
     }
 
-    const orgRes = data[0].answer;
+    const orgRes = data.answer;
     // const orgRes = jsonData.gen_answer.answer;
     const markRes = markdownToHtml(orgRes);
-    const pyMark = data[0].markdown;
+    const pyMark = data.markdown;
     
     chatHistory.push({ user: userText, assistant: orgRes });
 
