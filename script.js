@@ -115,6 +115,21 @@ function removeDivsWithClassName(className) {
 
 
 
+// const loadDataFromLocalstorage = () => {
+//   // Load saved chats and theme from local storage and apply/add on the page
+//   const themeColor = localStorage.getItem("themeColor");
+
+//   document.body.classList.toggle("light-mode", themeColor === "light_mode");
+//   themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
+
+//   const defaultText = `<div class="default-text">
+//                             <h1>GDSC SOU</h1>
+//                             <p>Start a conversation and explore GDSC SOU.<br> Your chat history will be displayed here.</p>
+//                         </div>`
+
+//   chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
+//   chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to bottom of the chat container
+// }
 const loadDataFromLocalstorage = () => {
   // Load saved chats and theme from local storage and apply/add on the page
   const themeColor = localStorage.getItem("themeColor");
@@ -128,8 +143,13 @@ const loadDataFromLocalstorage = () => {
                         </div>`
 
   chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
+
+  // Initialize chatHistory as an array or an empty array if not present in local storage
+  chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
+
   chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to bottom of the chat container
 }
+
 
 const createChatElement = (content, className) => {
   // Create new div and apply chat, specified class and set html content of div
