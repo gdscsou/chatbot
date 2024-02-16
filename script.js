@@ -209,11 +209,11 @@ const getChatResponse = async (incomingChatDiv) => {
     removeDivsWithClassName("suggestions");
     // const jsonData = JSON.parse(data);
     // const suggestions = extractDivText(data[1].Rem)
-    // const suggestions = extractDivText(jsonData.gen_questions.Rem;)
+    const suggestions = defaultSuggestions;
 
     for (let i = 0; i < suggestions.length; i++) {
       let suggestionElement = document.createElement('div')
-      suggestionElement.innerHTML = defaultSuggestions[i]
+      suggestionElement.innerHTML = suggestions[i]
       suggestionElement.className = "suggestions"
       suggestionElement.addEventListener("click", (e) => {
         handleOutgoingChat(suggestionElement.innerHTML)
