@@ -7,7 +7,7 @@ const suggestionContainer = document.querySelector(".suggestions-container")
 const suggestionsElem = document.querySelector(".suggestions")
 
 let userText = null;
-
+chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
 window.addEventListener('beforeunload', function() {
   localStorage.removeItem('chatHistory');
 });
