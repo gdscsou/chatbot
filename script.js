@@ -141,7 +141,7 @@ const createChatElement = (content, className) => {
 
 const getChatResponse = async (incomingChatDiv) => {
   // Initialize an array to store chat history in localStorage
-  let chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || "[]";
+  let chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
   const chatAPI = async (question, chathis) => {
     const API_URL = `https://gdscsou-cb-api.hf.space/chat?q=${question}&chathistory=${chathis}`;
   // try {
