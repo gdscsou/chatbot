@@ -170,13 +170,13 @@ const getChatResponse = async (incomingChatDiv) => {
 
  const response = await fetch(API_URL, {
     method: 'POST',
-    referrerPolicy: "unsafe-url",
     headers: {
       'Content-Type': 'application/json',
       'accept': 'application/json',
       'content-type': 'application/x-www-form-urlencoded',
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     },
+    referrerPolicy: "unsafe-url",
     // credentials: "include",
     mode: 'cors',
     // body: ''
